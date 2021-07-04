@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.content{
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 30px;
+}
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 25px 0;
+  transition: all 0.3s ease;
+}
+.navbar.sticky{
+  background: #00a8cc;
+  padding: 10px 0;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a{
+  color: black;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navbar .menu-list{
+  display: inline-flex;
+}
+.menu-list li{
+  list-style: none;
+}
+.menu-list li a{
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  padding: 15px;
+  cursor: pointer;
+  border: none;
+}
+
+.menu-list .login1 li{
+  list-style: none;
+}
+
+.menu-list .login1 .login{
+	margin-left: 250px;
+}
+
+
+.navbar .menu-list .login1{
+  display: inline-flex;
+}
+
+.menu-list .login1 li a{
+  background-color: white;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 2px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  padding: 9px;
+  cursor: pointer;
+  margin-right: 25px;
+  }
+
+.menu-list .login1 li a:hover{
+  color: white;
+  background-color: black;
+  transform: scale(1.05); 
+}
+
+.menu-list li a:hover{
+  color: white;
+}
+.banner{
+  background: url("banner.jpg") no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.about{
+  padding: 30px 0;
+}
+.about .title{
+  font-size: 38px;
+  font-weight: 700;
+}
+.about p{
+  padding-top: 20px;
+  text-align: justify;
+}
+.icon{
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.menu-list .cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+@media (max-width: 1230px) {
+  .content{
+    padding: 0 60px;
+  }
+}
+@media (max-width: 1100px) {
+  .content{
+    padding: 0 40px;
+  }
+}
+@media (max-width: 900px) {
+  .content{
+    padding: 0 30px;
+  }
+}
+@media (max-width: 700px) {
+  body.disabled{
+    overflow: hidden;
+  }
+  .icon{
+    display: block;
+  }
+  .icon.hide{
+    display: none;
+  }
+  .navbar.content.disabled{
+	  overflow: hidden;
+  }
+  
+  .navbar .menu-list{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    background: #00a8cc;
+    transition: all 0.3s ease;
+  }
+
+.navbar .menu-list .login1 .login{
+	
+	margin-left: 0px;
+	padding: 0px;
+  
+	
+}
+
+
+  
+  
+  .navbar.show .menu-list{
+    left: 0%;
+  }
+  .navbar .menu-list li{
+    margin-top: 45px;
+  }
+  .navbar .menu-list li a{
+    font-size: 23px;
+    margin-left: -100%;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar.show .menu-list li a{
+    margin-left: 0px;
+  }
+  
+  
+ .container{
+display: none;
+}
+
+h1 {
+position: relative;
+top: 30%;
+left: 1%;
+    
+}
+
+.content{
+  max-width: 400px;
+
+}
+
+}
+
+@media (max-width: 380px) {
+  .navbar .logo a{
+    font-size: 27px;
+  }
+}
+body{
+	background-color: #00a8cc;
+	
+}
+
+
+
+
+.container {
+	width: 400px;
+    max-width: 400px;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    background: #ffffff;
+	position: relative;
+	left: 67%;
+	top: 20%;
+	 
+}
+
+.container,
+.form__input,
+.form__button {
+    font: 500 1rem 'Quicksand', sans-serif;
+}
+
+.form--hidden {
+    display: none;
+}
+
+.form > *:first-child {
+    margin-top: 0;
+}
+
+.form > *:last-child {
+    margin-bottom: 0;
+}
+
+.form__title {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form__message {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form__message--success {
+    color: var(--color-success);
+}
+
+.form__message--error {
+    color: var(--color-error);
+}
+
+.form__input-group {
+    margin-bottom: 1rem;
+}
+
+.form__input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.form__input:focus {
+    border-color: var(--color-primary);
+    background: #ffffff;
+}
+
+.form__input--error {
+    color: var(--color-error);
+    border-color: var(--color-error);
+}
+
+.form__input-error-message {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-error);
+}
+
+.form__button {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background-color: black;
+}
+
+.form__button:hover {
+    background-color: #00a8cc ;
+}
+
+.form__button:active {
+    transform: scale(0.98);
+}
+
+.form__text {
+    text-align: center;
+}
+
+.form__link {
+    color: var(--color-secondary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form__link:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    max-width: 480px;
+    text-align: center;
+    margin: 60px auto;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+	position: relative;
+	right: 30%;
+	bottom: 10%;
+
+  }
+
+  h1::after {
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    animation: blink .7s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  
+  .cinza{
+	  position: relative;
+	  top: 100%;
+	  width: 100%;
+	  height: 100%;
+	  
+  }
+  
+  
+  body::-webkit-scrollbar {
+  width: 8px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #98949190;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: gray;    /* color of the scroll thumb */
+  border-radius: 10px;       /* roundness of the scroll thumb */
+  border: 2px  /* creates padding around scroll thumb */
+}
+  

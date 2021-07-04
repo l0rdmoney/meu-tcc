@@ -1,0 +1,138 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="testetcc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+	
+</head>
+<body>
+  <nav class="navbar">    
+  <div class="content">
+      <div class="logo">
+        <a href="#">PyGame</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="#"></button>Menu</button></a></li>
+        <li><a href="#"></button>Serviços</button></a></li>
+       <li><a href="#"></button>Sobre</button></a></li>
+	
+	 <div class="login1">
+	 <li class="login"><a href="#"></button> Entrar </button></a></li>
+     <li><a href="#"></button>Cadastro</button></a></li>
+	  </div>
+	  </ul> 
+	  <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  
+
+
+ 
+  
+ 
+    <div class="container">
+        <form class="form" id="login">
+            <h2 class="form__title">Login</h2>
+            <div class="form_message form_message--error"></div>
+            <div class="form__input-group">
+                <input type="text" class="form__input" autofocus placeholder="Usuario ou email">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="Senha">
+                <div class="form__input-error-message"></div>
+            </div>
+            <button class="form__button" type="submit">Continue</button>
+            <p class="form__text">
+                <a href="#" class="form__link">Esqueceu sua senha?</a>
+            </p>
+            <p class="form__text">
+                <a class="form__link" href="./" id="linkCreateAccount">Ainda não possui uma conta? Criar Conta</a>
+            </p>
+        </form>
+        <form class="form form--hidden" id="createAccount">
+            <h2 class="form__title">Criar Conta</h2>
+            <div class="form_message form_message--error"></div>
+            <div class="form__input-group">
+                <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Usuario ou email">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="text" class="form__input" autofocus placeholder="Endereço de email">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="Senha">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="Confirme sua senha">
+                <div class="form__input-error-message"></div>
+            </div>
+            <button class="form__button" type="submit">Continue</button>
+            <p class="form__text">
+                <a class="form__link" href="./" id="linkLogin">Já possui uma conta? Entrar</a>
+            </p>
+        </form>
+    </div>
+    <script src="login.js"></script>
+
+ <h1>Aprenda a Programar Jogando!</h1>
+
+<script>
+  function typeWriter(elemento) {
+    const textoArray = elemento.innerHTML.split('');
+    elemento.innerHTML = '';
+    textoArray.forEach((letra, i) => {
+      setTimeout(() => elemento.innerHTML += letra, 85 * i);
+    });
+  }
+
+  // Se estiver tendo problemas com performance, utilize o FOR loop como abaixo no local do forEach
+  // function typeWriter(elemento) {
+  //   const textoArray = elemento.innerHTML.split('');
+  //   elemento.innerHTML = '';
+  //   for(let i = 0; i < textoArray.length; i++) {
+  //     setTimeout(() => elemento.innerHTML += textoArray[i], 75 * i);
+  //   }
+  // }
+
+  const titulo = document.querySelector('h1');
+  typeWriter(titulo);
+</script>
+
+<div class="cinza">
+<h2>a</h2>
+</div>
+
+
+
+</body>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.add("sticky");
+    }
+  </script>
+  
