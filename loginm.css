@@ -133,7 +133,7 @@
     padding: 0 30px;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 	.navbar .menu-list .login1{
 	overflow: enable;
 	display: inline-flex;
