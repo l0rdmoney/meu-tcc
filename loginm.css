@@ -1,11 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.content{
+  max-width: 625px;
+  margin: auto;
+  padding: 0 30px;
+}
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 25px 0;
+  transition: all 0.3s ease;
+}
+.navbar.sticky{
+  background: #00a8cc;
+  padding: 10px 0;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a{
+  color: black;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navbar .menu-list{
+  display: inline-flex;
+}
+.menu-list li{
+  list-style: none;
+}
+.menu-list li a{
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  padding: 15px;
+  cursor: pointer;
+  border: none;
+}
+
+.menu-list .login1 li{
+  list-style: none;
+}
+
+.menu-list .login1 .login{
+	margin-left: 250px;
+}
+
+
+.navbar .menu-list .login1{
+  display: inline-flex;
+}
+
+.menu-list .login1 li a{
+  background-color: white;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 2px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  padding: 9px;
+  cursor: pointer;
+  margin-right: 25px;
+  }
+
+.menu-list .login1 li a:hover{
+  color: white;
+  background-color: black;
+  transform: scale(1.05); 
+}
+
+.menu-list li a:hover{
+  color: white;
+}
+.about{
+  padding: 30px 0;
+}
+.about .title{
+  font-size: 38px;
+  font-weight: 700;
+}
+.about p{
+  padding-top: 20px;
+  text-align: justify;
+}
+.icon{
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.menu-list .cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+
+
+.navbar .menu-list .login1{
+	overflow: visible;
+	display: none;
+}
+
+@media (max-width: 1230px) {
+  .content{
+    padding: 0 60px;
+  }
+}
+@media (max-width: 1100px) {
+  .content{
+    padding: 0 40px;
+  }
+}
+@media (max-width: 900px) {
+  .content{
+    padding: 0 30px;
+  }
+}
+@media (max-width: 700px) {
+	.navbar .menu-list .login1{
+	overflow: enable;
+	display: inline-flex;
+}
+	
+  .icon{
+    display: block;
+  }
+  .icon.hide{
+    display: none;
+  }
+  .navbar.content.disabled{
+	  overflow: hidden;
+  }
+  
+  .navbar .menu-list{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    background: #00a8cc;
+    transition: all 0.3s ease;
+  }
+
+.navbar .menu-list .login1 .login{
+	
+	margin-left: 0px;
+	padding: 0px;
+  
+	
+}
+  
+  .navbar.show .menu-list{
+    left: 0%;
+  }
+  .navbar .menu-list li{
+    margin-top: 45px;
+  }
+  .navbar .menu-list li a{
+    font-size: 23px;
+    margin-left: -100%;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar.show .menu-list li a{
+    margin-left: 0px;
+  }
+  
+
+.content{
+  max-width: 400px;
+
+}
+
+}
+
+@media (max-width: 380px) {
+  .navbar .logo a{
+    font-size: 27px;
+  }
+}
+
 body{
 	background-color: #00a8cc;
 	
 }
 
 .container {
-	width: 400px;
-    max-width: 400px;
+	width: 350px;
+    max-width: 350px;
     margin: 1rem;
     padding: 2rem;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
@@ -14,8 +216,8 @@ body{
 	position: relative;
 	left: 50%;
 	top: 50%;
-	margin-left: -200px;
-	margin-top: -200px;
+	margin-left: -175px;
+	
 
 	 
 }
@@ -122,3 +324,5 @@ body{
 .form__link:hover {
     text-decoration: underline;
 }
+
+
