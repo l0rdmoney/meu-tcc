@@ -1,8 +1,38 @@
 <html>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="loginm.css">
 <script src="login.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
+ 
+ <body>
+ 
+ <nav class="navbar">    
+  <div class="content">
+      <div class="logo">
+        <a href="#">PyGame</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="#"></button>Menu</button></a></li>
+        <li><a href="#"></button>Serviços</button></a></li>
+       <li><a href="#"></button>Sobre</button></a></li>
+	
+	 <div class="login1">
+	 <li class="login"><a href="loginm.html"></button> Entrar </button></a></li>
+     <li><a href="cadastrom.html"></button>Cadastro</button></a></li>
+	  </div>
+	  </ul> 
+	  <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+ 
  <div class="container">
         <form class="form" id="login">
             <h2 class="form__title">Login</h2>
@@ -48,4 +78,29 @@
             </p>
         </form>
     </div>
+</body>
+
+  <script>
+  const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.add("sticky");
+    }
+  </script>
+  
+
+
+
 </html>
